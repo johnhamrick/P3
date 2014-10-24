@@ -57,20 +57,3 @@ Route::post('/random_user', function() {
 	return View::make('random_user')
 		->with('data', $data);
 });
-
-$v = Validator::make($input, $rules);
-
-if( $v->passes()) {
-
-	# code for validation success!
-
-} else {
-
-	# code for validation failure
-}
-
-);
-
-{{ $errors->first('email') }}
-
-{{ $errors->first('age') }}
