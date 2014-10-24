@@ -1,44 +1,76 @@
 <?php
 
-Route::get('/{$x}', function($x);
-Route::get('user/{name}', function($name))
-->where('name', '[A-Za-z]+');
-Route::get('user/{id}', function($id))
-->where('id', '[0-9]+');
-{
-	return View::make('index', $x)
+Route::get('/', function() {
+	return View::make('index');
 });
 
-Route::get('/LoremIpsumText', function()
-{
-	return View::make(LoremIpsumFactorum)
+Route::get('/lorem_ipsum/{numberOfParas?}', function($numberOfParas = 1) {
+	
+	// instantiate new loremGenerator Obj to be passed to the View
+	$loremGenerator = new LoremGenerator($numberOfParas);
+	$paragraphs = $loremGenerator->getParagraphs();
+	
+	$data['numberOfParas'] = $numberOfParas;
+	$data['paragraphs'] = $paragraphs;
+	
+	return View::make('lorem_ipsum')
+		->with('data', $data);
 });
 
-$rules = array(
+Route::post('/lorem_ipsum/', function() {
+	$numberOfParas = Input::get('numberOfParas');
+	
+	// instantiate new loremGenerator Obj to be passed to the View
+	$loremGenerator = new LoremGenerator($numberOfParas);
+	$paragraphs = $loremGenerator->getParagraphs();
+	
+	$data['numberOfParas'] = $numberOfParas;
+	$data['paragraphs'] = $paragraphs;
+	
+	return View::make('lorem_ipsum')
+		->with('data', $data);
+});
 
-	...
+Route::get('/random_user/{numberOfUsers?}', function($numberOfUsers = 1) {
 
-	);
+	// instantiate new userGenerator Obj to be passed to the View
+	$userGenerator = new UserGenerator($numberOfUsers);
+	$users = $userGenerator->getUsers();
+	
+	$data['numberOfUsers'] = $numberOfUsers;
+	$data['users'] = $users;
+	
+	return View::make('random_user')
+		->with('data', $data);
+});
+
+Route::post('/random_user', function() {
+	$numberOfUsers = Input::get('numberOfUsers');
+	
+	// instantiate new userGenerator Obj to be passed to the View
+	$userGenerator = new UserGenerator($numberOfUsers);
+	$users = $userGenerator->getUsers();
+	
+	$data['numberOfUsers'] = $numberOfUsers;
+	$data['users'] = $users;
+	
+	return View::make('random_user')
+		->with('data', $data);
+});
 
 $v = Validator::make($input, $rules);
 
-if( $v->passes()) {
+	if( $v->passes()) {
 
 	# code for validation success!
 
-} else {
+	} else {
 
 	# code for validation failure
 }
 
-$rules = array(
-	'username' 	=> 'Required|Min:3|Max:30|Alpha',
-	'email'		=> 'Required|Between:3,50|Email|Unique:users',
-	'password'	=> 'Required|AlphaNum|Min:7|Confirmed',
-	'password_confirmation' => 'Required|AlphaNum|Min:7'
-
 );
 
-{{ $errors->first('email') }}
+	{{ $errors->first('email') }}
 
-{{ $errors->first('age') }}
+	{{ $errors->first('age') }}
