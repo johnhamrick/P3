@@ -1,4 +1,3 @@
-@extends('_master')
 
 @section('title')
 	Developer&#39;s Toolkit
