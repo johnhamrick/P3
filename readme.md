@@ -1,4 +1,4 @@
-**P3**
+# **P3** #
 
 
 The goal of this project is to provide hands-on practice with working with the essentials of building a Laravel-based site.
