@@ -1,4 +1,3 @@
-@extends('_master')
 
 @section('title')
 	Developer&#39;s Toolkit
@@ -45,15 +44,12 @@
 	</p>
 		<ul>
 		<li>Name</li>
-		<li>Address</li>
-		<li>Phone</li>
-		<li>Email</li>
-		<li>Company</li>
+		<li>Full address</li>
+		<li>Phone number</li>
+		<li>Email addres</li>
+		<li>Comapny</li>
 		</ul>
-<p>
-<br />
-<a class="btn btn-default" role="button" href="random_user/"><span class="glyphicon glyphicon-cog min"></span> Generate User(s)</a>
-</p>
+
 </div>
 </div>
 </div>

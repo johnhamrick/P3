@@ -1,13 +1,13 @@
 @extends('_master')
 
-{{--*/ $numberOfParas = $data['numberOfParas'] /*--}}
+
 
 @section('title')
 	Developer&#39;s Toolkit - Lorem Ipsum
 @stop
 
 @section('body')
-	@include('internal_nav')
+	
 
 <div class="container">
 	<hr />

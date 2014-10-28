@@ -4,17 +4,16 @@ Route::get('/', function() {
 	return View::make('index');
 });
 
-Route::get('/lorem_ipsum/{numberOfParas?}', function($numberOfParas = 1) {
+Route::get('/lorem_ipsum', function() {
 	
 	// instantiate new loremGenerator Obj to be passed to the View
-	$loremGenerator = new LoremGenerator($numberOfParas);
-	$paragraphs = $loremGenerator->getParagraphs();
+	//$loremGenerator = new LoremGenerator($numberOfParas);
+	//$paragraphs = $loremGenerator->getParagraphs();
 	
-	$data['numberOfParas'] = $numberOfParas;
-	$data['paragraphs'] = $paragraphs;
+	$data['numberOfParas'] = 0;
+	$data['paragraphs'] = '';
 	
-	return View::make('lorem_ipsum')
-		->with('data', $data);
+	return View::make('lorem_ipsum') -> with('data', $data);
 });
 
 Route::post('/lorem_ipsum/', function() {
@@ -31,20 +30,19 @@ Route::post('/lorem_ipsum/', function() {
 		->with('data', $data);
 });
 
-Route::get('/random_user/{numberOfUsers?}', function($numberOfUsers = 1) {
+Route::get('/random_user/{numberOfUsers?}', function() {
 
 	// instantiate new userGenerator Obj to be passed to the View
 	$userGenerator = new UserGenerator($numberOfUsers);
 	$users = $userGenerator->getUsers();
 	
-	$data['numberOfUsers'] = $numberOfUsers;
-	$data['users'] = $users;
+	$data['numberOfUsers'] = 0;
+	$data['users'] = '';
 	
-	return View::make('random_user')
-		->with('data', $data);
+	return View::make('random_user') -> with('data', $data);
 });
 
-Route::post('/random_user', function() {
+Route::post('/random_user/', function() {
 	$numberOfUsers = Input::get('numberOfUsers');
 	
 	// instantiate new userGenerator Obj to be passed to the View
