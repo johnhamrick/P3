@@ -41,7 +41,7 @@
 <div class="col-md-4">
 <h3>Random User</h3>
 	<p>
-	Random Uers are often needed for testing in software applications. This Random User Generator provides fictitious user(s) with the following parameters:
+	Random Users are often needed for testing in software applications. This Random User Generator provides fictitious user(s) with the following parameters:
 	</p>
 		<ul>
 		<li>Name</li>
