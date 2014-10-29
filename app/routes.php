@@ -30,7 +30,7 @@ Route::post('/lorem_ipsum/', function() {
 		->with('data', $data);
 });
 
-Route::get('/random_user/{numberOfUsers?}', function() {
+Route::get('/random_user/{numberOfUsers?}', function($numberOfUsers = 0) {
 
 	// instantiate new userGenerator Obj to be passed to the View
 	$userGenerator = new UserGenerator($numberOfUsers);
