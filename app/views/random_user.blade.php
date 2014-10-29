@@ -10,7 +10,7 @@
 @stop
 
 @section('body')
-	@include('internal_nav')
+
 
 <div class="container">
 	<hr />
