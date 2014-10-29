@@ -7,9 +7,6 @@ Route::get('/', function() {
 Route::get('/lorem_ipsum', function() {
 	
 	// instantiate new loremGenerator Obj to be passed to the View
-	//$loremGenerator = new LoremGenerator($numberOfParas);
-	//$paragraphs = $loremGenerator->getParagraphs();
-	
 	$data['numberOfParas'] = 0;
 	$data['paragraphs'] = '';
 	
@@ -33,9 +30,6 @@ Route::post('/lorem_ipsum/', function() {
 Route::get('/random_user', function() {
 
 	// instantiate new userGenerator Obj to be passed to the View
-	// $userGenerator = new UserGenerator($numberOfUsers);
-	// $users = $userGenerator->getUsers();
-	
 	$data['numberOfUsers'] = 0;
 	$data['users'] = '';
 	

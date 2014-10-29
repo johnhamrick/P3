@@ -6,7 +6,7 @@
 @stop
 
 @section('title')
-	Developer&#39;s Best Friend - Random User
+	Developer&#39;s Toolkit - Random User
 @stop
 
 @section('body')
@@ -22,10 +22,10 @@
 		</p>
 			<ul>
 				<li>Name</li>
-				<li>Full address</li>
-				<li>Phone number</li>
-				<li>Email addres</li>
-				<li>Comapny</li>
+				<li>Address</li>
+				<li>Phone</li>
+				<li>Email</li>
+				<li>Company</li>
 			</ul>
 		</div>
 		
