@@ -29,7 +29,7 @@
 		<div class="col-md-4">
 			<h3>Lorem Ipsum</h3>
 			<p>
-	"In publishing and graphic design, lorem ipsum is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation.
+	"In publishing and graphic design, Lorem Ipsum is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation.
 	Replacing meaningful content that could be distracting with placeholder text may allow viewers to focus on graphic aspects such as font, typography, and page layout."
 </p>
 <br />Source: <a href="http://en.wikipedia.org/wiki/Lorem_ipsum">Wikipedia <span class="glyphicon glyphicon-new-window min"></span></a>
@@ -45,9 +45,9 @@
 	</p>
 		<ul>
 		<li>Name</li>
-		<li>Address</li>
-		<li>Phone</li>
 		<li>Email</li>
+		<li>Phone</li>
+		<li>Address</li>
 		<li>Company</li>
 		</ul>
 <p>
