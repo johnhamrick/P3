@@ -20,8 +20,8 @@ Route::post('/lorem_ipsum/', function() {
 	$numberOfParas = Input::get('numberOfParas');
 	
 	// instantiate new loremGenerator Obj to be passed to the View
-	$loremGenerator = new LoremGenerator($numberOfParas);
-	$paragraphs = $loremGenerator->getParagraphs();
+//	$loremGenerator = new LoremGenerator($numberOfParas);
+//	$paragraphs = $loremGenerator->getParagraphs();
 	
 	$data['numberOfParas'] = $numberOfParas;
 	$data['paragraphs'] = $paragraphs;
