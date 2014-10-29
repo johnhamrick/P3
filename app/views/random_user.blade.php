@@ -6,7 +6,7 @@
 @stop
 
 @section('title')
-	Developer&#39;s Toolkit - Random User
+	Developer&#39;s Toolkit - Random User Generator
 @stop
 
 @section('body')
@@ -18,13 +18,13 @@
 		<div class="col-md-4">
 			<h3>About</h3>
 		<p>
-		Random Users are often needed for testing in software applications. This Random User Generator provides fictitious user(s) with the following parameters:
+		Random users are often needed for testing in software applications. This Random User Generator provides fictitious user(s) with the following parameters:
 		</p>
 			<ul>
 				<li>Name</li>
-				<li>Address</li>
-				<li>Phone</li>
 				<li>Email</li>
+				<li>Phone</li>
+				<li>Address</li>
 				<li>Company</li>
 			</ul>
 		</div>
